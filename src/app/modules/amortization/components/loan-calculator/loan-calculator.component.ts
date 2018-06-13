@@ -15,7 +15,18 @@ export class LoanCalculatorComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // this.calculate();
+  }
+  
+  onDetailsAdded(loanData:LoanData){
+    this.loanData = loanData;
+    console.log(this.loanData)
     this.calculate();
+  }
+  onDetailsReset(loanData:any){
+    this.loanData = loanData;
+    this.displayLoan = new DisplayLoan();
+    this.monthlyEmis = [];
   }
   calculate(){
     this.monthlyEmis = []
@@ -55,12 +66,7 @@ export class LoanCalculatorComponent implements OnInit {
             i++;
         }
     }
-
-    console.log(this.displayLoan);
-    console.log(this.monthlyEmis);
-  }
-  reset(){
-    this.loanData = new LoanData();
-    this.monthlyEmis = [];
+    // console.log(this.displayLoan);
+    // console.log(this.monthlyEmis);
   }
 }

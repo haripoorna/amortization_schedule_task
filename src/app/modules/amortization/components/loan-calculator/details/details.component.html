@@ -1,3 +1,54 @@
-<p>
-  details works!
-</p>
+
+    <mat-card  fxLayout="row" fxLayoutAlign="start start">
+            <mat-card-content>
+                    <div fxLayout="row wrap" fxLayoutAlign="start start">
+                        <h3 fxFlex="100" style="text-align: left;">Details</h3>
+    <table align="center" class="table table-bordered">
+        <tbody>
+            <tr>
+                <td>
+                    <b>Loan Amount:</b>
+                </td>
+                <td align="right">{{displayLoan.loanAmt}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Number of EMIs:</b>
+                </td>
+                <td align="right">{{displayLoan.noOfEmi}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Annual Interest Rate:</b>
+                </td>
+                <td align="right">{{displayLoan.annualInterestRate}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Monthly Interest Rate:</b>
+                </td>
+                <td align="right">{{displayLoan.monthlyInterestRate  | number : '1.2-2'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Monthly EMI Payment:</b>
+                </td>
+                <td align="right">Rs. {{displayLoan.monthlyEmiPayment  | number : '1.2-2'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Total Loan Amount Payable:</b>
+                </td>
+                <td align="right">Rs. {{displayLoan.totalAmt  | number : '1.2-2'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Total Interest Payable:</b>
+                </td>
+                <td align="right">Rs. {{displayLoan.interestAmt  | number : '1.2-2'}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </mat-card-content>
+    </mat-card>

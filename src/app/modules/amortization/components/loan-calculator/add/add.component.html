@@ -1,3 +1,29 @@
-<p>
-  add works!
-</p>
+
+    <mat-card style="height: 333px">
+        <mat-card-content>
+            <div fxLayout="row wrap" fxLayoutAlign="start start">
+                <h3 fxFlex="100" style="text-align: left;">Enter Your Home Loan Details & Click the Calculate Button
+                    </h3>
+                <div fxLayout="row wrap" fxFlex="100">
+                    <mat-form-field fxFlex="100">
+                        <input matInput placeholder="
+                        Loan Amount" required [(ngModel)]="loanData.amt" [ngModelOptions]="{standalone: true}">
+                    </mat-form-field>
+                    <mat-form-field fxFlex="100" class="padding">
+                        <input matInput placeholder="Annual Interest Rate:" required [(ngModel)]="loanData.annualInterestRate" [ngModelOptions]="{standalone: true}">   
+                    </mat-form-field>
+                    <mat-form-field fxFlex="100" class="padding margin8">
+                        <input matInput type="text" placeholder="Total Number of EMI Payments (in Months)" required [(ngModel)]="loanData.months" [ngModelOptions]="{standalone: true}">                   
+                    </mat-form-field> 
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                    <button mat-raised-button color="warn" fxLayoutAlign="center center" class="link" (click)="addLoanDetails()">
+                    calculate
+                    </button> 
+                    <button mat-raised-button color="basic" fxLayoutAlign="center center" class="link" (click)="resetLoanDetails()">
+                    Reset
+                    </button>  
+                 </div>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
